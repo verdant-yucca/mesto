@@ -1,0 +1,53 @@
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts/Inter/inter.css);
+
+/* body page */
+
+@import url(../blocks/page/page.css);
+
+/* section header */
+
+@import url(../blocks/header/header.css);
+@import url(../blocks/header/__logo/header__logo.css);
+
+/* main content */
+
+@import url(../blocks/content/content.css);
+
+/* section profile */
+
+@import url(../blocks/profile/profile.css);
+@import url(../blocks/profile/__avatar/profile__avatar.css);
+@import url(../blocks/profile__info-block/profile__info-block.css);
+@import url(../blocks/profile/__profile-name/profile__profile-name.css);
+@import url(../blocks/profile/__profile-info/profile__profile-info.css);
+@import url(../blocks/profile/__buttonAdd/profile__buttonAdd.css);
+@import url(../blocks/profile/__buttonEdit/profile__buttonEdit.css);
+
+/* section elements */
+
+@import url(../blocks/elements/elements.css);
+
+/* section element */
+
+@import url(../blocks/element/element.css);
+@import url(../blocks/element/__description/element__description.css);
+@import url(../blocks/element/__element-info/element__element-info.css);
+@import url(../blocks/element/__button-like/element__button-like.css);
+@import url(../blocks/element/__image/element__image.css);
+
+/* section footer */
+
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__copyright/footer__copyright.css);
+
+/* section ppEditProfile */
+
+@import url(../blocks/ppEditProfile/ppEditProfile.css);
+@import url(../blocks/ppEditProfile/__container/ppEditProfile__container.css);
+@import url(../blocks/ppEditProfile/__ppTitle/ppEditProfile__ppTitle.css);
+@import url(../blocks/ppEditProfile/__edit/ppEditProfile__edit.css);
+@import url(../blocks/ppEditProfile/__profile-name/ppEditProfile__profile-name.css);
+@import url(../blocks/ppEditProfile/__profile-info/ppEditProfile__profile-info.css);
+@import url(../blocks/ppEditProfile/__btnSave/ppEditProfile__btnSave.css);
+@import url(../blocks/ppEditProfile/__btnClose/ppEditProfile__btnClose.css);

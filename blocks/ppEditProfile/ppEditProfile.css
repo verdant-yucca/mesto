@@ -1,0 +1,13 @@
+.ppEditProfile {
+  width: 100%;
+  height: 100vh;
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.ppEditProfile.active {
+  display: flex;
+}

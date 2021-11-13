@@ -1,0 +1,18 @@
+.profile__buttonEdit {
+  width: 24px;
+  height: 24px;
+  margin-left: 18px;
+  padding: 0;
+  background-color: transparent;
+  border: 1px solid #fff;
+  cursor: pointer;
+  background-image: url(../../../images/buttonEdit.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media screen and (max-width: 650px) {
+  .profile__buttonEdit {
+    margin-left: 10px;
+  }
+}

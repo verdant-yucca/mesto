@@ -1,0 +1,18 @@
+.ppEditProfile__profile-name {
+  width: 358px;
+  margin: 0 0 30px;
+  padding-bottom: 13px;
+  border: none;
+  border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  margin-left: 36px;
+}
+
+@media screen and (max-width: 680px) {
+  .ppEditProfile__profile-name {
+    width: 238px;
+    margin-left: 22px;
+  }
+}

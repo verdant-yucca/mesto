@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./pages/index.css">
+  <title>Место</title>
+</head>
+
+<body class="page">
+  <header class="header">
+    <img class="header__logo" src="./images/logo.svg" alt="Россия">
+  </header>
+
+  <main class="content">
+    <section class="profile">
+      <img class="profile__avatar" src="./images/Avatar.png" alt="аватарка">
+      <div>
+        <div class="profile__info-block">
+          <h2 class="profile__profile-name">Жак-Ив Кусто</h2>
+          <button class="profile__buttonEdit" type="button"></button>
+        </div>
+        <p class="profile__profile-info" >Исследователь океана</p>
+      </div>
+      <button class="profile__buttonAdd" type="button"></button>
+    </section>
+
+    <section>
+      <ul class="elements">
+        <li class="element">
+          <img class="element__image" src="./images/Karachaevsk.png" alt="Карачаевск">
+          <div class="element__description">
+            <h2 class="element__element-info">Карачаевск</h2>
+            <button class="element__button-like"></button>
+          </div>
+        </li>
+
+        <li class="element">
+          <img class="element__image" src="./images/elbrus.png" alt="Эльбрус">
+          <div class="element__description">
+            <h2 class="element__element-info">Гора Эльбрус</h2>
+            <button class="element__button-like"></button>
+          </div>
+        </li>
+
+        <li class="element">
+          <img class="element__image" src="./images/dombay.png" alt="Домбай">
+          <div class="element__description">
+            <h2 class="element__element-info">Домбай</h2>
+            <button class="element__button-like"></button>
+          </div>
+        </li>
+
+        <li class="element">
+          <img class="element__image" src="./images/elbrus.png" alt="Эльбрус">
+          <div class="element__description">
+            <h2 class="element__element-info">Гора Эльбрус</h2>
+            <button class="element__button-like"></button>
+          </div>
+
+        </li>
+        <li class="element">
+          <img class="element__image" src="./images/dombay.png" alt="Домбай">
+          <div class="element__description">
+            <h2 class="element__element-info">Домбай</h2>
+            <button class="element__button-like"></button>
+          </div>
+
+        </li>
+        <li class="element">
+          <img class="element__image" src="./images/Karachaevsk.png" alt="Карачаевск">
+          <div class="element__description">
+            <h2 class="element__element-info">Карачаевск</h2>
+            <button class="element__button-like"></button>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__copyright">&copy;2021 Давыденко Роман</p>
+  </footer>
+
+  <div class="ppEditProfile">
+    <div class="ppEditProfile__container">
+      <h2 class="ppEditProfile__ppTitle">Редактировать профиль</h2>
+      <form class="ppEditProfile__edit" name="edit-form">
+        <input type="text" class="ppEditProfile__profile-name" name="name" required>
+        <input type="text" class="ppEditProfile__profile-info" name="description" required>
+        <button type="submit" class="ppEditProfile__btnSave">Сохранить</button>
+      </form>
+      <div>
+        <button type="button" class="ppEditProfile__btnClose"></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./scripts/script.js"></script>
+</body>
+</html>
