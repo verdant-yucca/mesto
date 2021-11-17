@@ -6,9 +6,13 @@
   background-color: transparent;
   border: 1px solid #fff;
   cursor: pointer;
-  background-image: url(../../../images/buttonEdit.png);
+  background-image: url(../../../images/buttonEdit.svg);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.profile__buttonEdit:hover {
+  opacity: 60%;
 }
 
 @media screen and (max-width: 650px) {

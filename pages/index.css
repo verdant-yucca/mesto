@@ -18,7 +18,7 @@
 
 @import url(../blocks/profile/profile.css);
 @import url(../blocks/profile/__avatar/profile__avatar.css);
-@import url(../blocks/profile__info-block/profile__info-block.css);
+@import url(../blocks/profile/__info-block/profile__info-block.css);
 @import url(../blocks/profile/__profile-name/profile__profile-name.css);
 @import url(../blocks/profile/__profile-info/profile__profile-info.css);
 @import url(../blocks/profile/__buttonAdd/profile__buttonAdd.css);
@@ -44,6 +44,7 @@
 /* section ppEditProfile */
 
 @import url(../blocks/ppEditProfile/ppEditProfile.css);
+@import url(../blocks/ppEditProfile/_active/ppEditProfile_active.css);
 @import url(../blocks/ppEditProfile/__container/ppEditProfile__container.css);
 @import url(../blocks/ppEditProfile/__ppTitle/ppEditProfile__ppTitle.css);
 @import url(../blocks/ppEditProfile/__edit/ppEditProfile__edit.css);

@@ -13,13 +13,13 @@ let btnClose = ppEditProfile.querySelector('.ppEditProfile__btnClose');
 function ppEditProfileOpen() {
   editName.value = name.textContent;
   editInfo.value = info.textContent;
-  ppEditProfile.classList.add('active');
+  ppEditProfile.classList.add('ppEditProfile_active');
 }
 btnEdit.addEventListener('click', ppEditProfileOpen);
 
 //закрыть пп
 function ppEditProfileClose() {
-  ppEditProfile.classList.remove('active');
+  ppEditProfile.classList.remove('ppEditProfile_active');
 }
 btnClose.addEventListener('click', ppEditProfileClose);
 
