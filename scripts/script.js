@@ -11,26 +11,26 @@ let btnClose = ppEditProfile.querySelector('.popup-edit-profile__batton-close');
 
 
 //открыть пп
-function ppEditProfileOpen() {
+function openPopupEditProfile() {
   editName.value = name.textContent;
   editInfo.value = info.textContent;
   ppEditProfile.classList.add('popup-edit-profile_active');
 }
-btnEdit.addEventListener('click', ppEditProfileOpen);
+btnEdit.addEventListener('click', openPopupEditProfile);
 
 //закрыть пп
-function ppEditProfileClose() {
+function closePopuoEditProfile() {
   ppEditProfile.classList.remove('popup-edit-profile_active');
 }
-btnClose.addEventListener('click', ppEditProfileClose);
+btnClose.addEventListener('click', closePopuoEditProfile);
 
 //применить изменения и закрыть пп
-function ppEditProfileSubmit(e) {
+function SubmitPopupEditProfile(e) {
   e.preventDefault();
   let newName = editName.value;
   let newJob = editInfo.value;
   name.textContent = newName;
   info.textContent = newJob;
-  ppEditProfileClose();
+  closePopuoEditProfile();
 }
-fieldsEdit.addEventListener('submit', ppEditProfileSubmit);
+fieldsEdit.addEventListener('submit', SubmitPopupEditProfile);
