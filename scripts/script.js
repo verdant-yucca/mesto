@@ -27,10 +27,8 @@ btnClose.addEventListener('click', closePopuoEditProfile);
 //применить изменения и закрыть пп
 function SubmitPopupEditProfile(e) {
   e.preventDefault();
-  let newName = editName.value;
-  let newJob = editInfo.value;
-  name.textContent = newName;
-  info.textContent = newJob;
+  name.textContent = editName.value;
+  info.textContent = editInfo.value;
   closePopuoEditProfile();
 }
 fieldsEdit.addEventListener('submit', SubmitPopupEditProfile);
