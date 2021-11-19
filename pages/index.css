@@ -21,8 +21,8 @@
 @import url(../blocks/profile/__info-block/profile__info-block.css);
 @import url(../blocks/profile/__profile-name/profile__profile-name.css);
 @import url(../blocks/profile/__profile-info/profile__profile-info.css);
-@import url(../blocks/profile/__buttonAdd/profile__buttonAdd.css);
-@import url(../blocks/profile/__buttonEdit/profile__buttonEdit.css);
+@import url(../blocks/profile/__button-add/profile__button-add.css);
+@import url(../blocks/profile/__button-edit/profile__button-edit.css);
 
 /* section elements */
 
@@ -43,12 +43,11 @@
 
 /* section ppEditProfile */
 
-@import url(../blocks/ppEditProfile/ppEditProfile.css);
-@import url(../blocks/ppEditProfile/_active/ppEditProfile_active.css);
-@import url(../blocks/ppEditProfile/__container/ppEditProfile__container.css);
-@import url(../blocks/ppEditProfile/__ppTitle/ppEditProfile__ppTitle.css);
-@import url(../blocks/ppEditProfile/__edit/ppEditProfile__edit.css);
-@import url(../blocks/ppEditProfile/__profile-name/ppEditProfile__profile-name.css);
-@import url(../blocks/ppEditProfile/__profile-info/ppEditProfile__profile-info.css);
-@import url(../blocks/ppEditProfile/__btnSave/ppEditProfile__btnSave.css);
-@import url(../blocks/ppEditProfile/__btnClose/ppEditProfile__btnClose.css);
+@import url(../blocks/popup-edit-profile/popup-edit-profile.css);
+@import url(../blocks/popup-edit-profile/_active/popup-edit-profile_active.css);
+@import url(../blocks/popup-edit-profile/__container/popup-edit-profile__container.css);
+@import url(../blocks/popup-edit-profile/__title/popup-edit-profile__title.css);
+@import url(../blocks/popup-edit-profile/__edit/popup-edit-profile__edit.css);
+@import url(../blocks/popup-edit-profile/__input/popup-edit-profile__input.css);
+@import url(../blocks/popup-edit-profile/__button-save/popup-edit-profile__button-save.css);
+@import url(../blocks/popup-edit-profile/__btnClosebatton-close/popup-edit-profile__batton-close.css);

@@ -1,4 +1,4 @@
-.ppEditProfile__btnClose {
+.popup-edit-profile__batton-close {
   height: 32px;
   width: 32px;
   padding: 0;
@@ -13,12 +13,12 @@
   cursor: pointer;
 }
 
-.ppEditProfile__btnClose:hover {
+.popup-edit-profile__batton-close:hover {
   opacity: 60%;
 }
 
 @media screen and (max-width: 680px) {
-  .ppEditProfile__btnClose {
+  .popup-edit-profile__batton-close {
     height: 20px;
     width: 20px;
     top: -36px;

@@ -1,8 +1,9 @@
-.profile__buttonAdd {
+.profile__button-add {
   width: 150px;
   height: 50px;
   margin: 35px 0 35px auto;
   padding: 0;
+	border-radius: 2px;
   background-color: transparent;
   border: 2px solid #fff;
   cursor: pointer;
@@ -12,12 +13,12 @@
   background-position: center;
 }
 
-.profile__buttonAdd:hover {
+.profile__button-add:hover {
   opacity: 60%;
 }
 
 @media screen and (max-width: 950px) {
-  .profile__buttonAdd {
+  .profile__button-add {
     width: 100%;
     align-items: center;
   }

@@ -1,25 +1,26 @@
 let profile = document.querySelector('.profile');
-let btnEdit = profile.querySelector('.profile__buttonEdit');
+let btnEdit = profile.querySelector('.profile__button-edit');
 let name = profile.querySelector('.profile__profile-name');
 let info = profile.querySelector('.profile__profile-info');
-let ppEditProfile = document.querySelector('.ppEditProfile');
-let fieldsEdit = ppEditProfile.querySelector('.ppEditProfile__edit');
-let ppContainer = ppEditProfile.querySelector('.ppEditProfile__container');
-let editName = document.querySelector('.ppEditProfile__profile-name');
-let editInfo = document.querySelector('.ppEditProfile__profile-info');
-let btnClose = ppEditProfile.querySelector('.ppEditProfile__btnClose');
+let ppEditProfile = document.querySelector('.popup-edit-profile');
+//let ppContainer = ppEditProfile.querySelector('.popup-edit-profile__container');
+let fieldsEdit = ppEditProfile.querySelector('.popup-edit-profile__edit');
+let editName = ppEditProfile.querySelector('.popup-edit-profile__input_name');
+let editInfo = ppEditProfile.querySelector('.popup-edit-profile__input_info');
+let btnClose = ppEditProfile.querySelector('.popup-edit-profile__batton-close');
+
 
 //открыть пп
 function ppEditProfileOpen() {
   editName.value = name.textContent;
   editInfo.value = info.textContent;
-  ppEditProfile.classList.add('ppEditProfile_active');
+  ppEditProfile.classList.add('popup-edit-profile_active');
 }
 btnEdit.addEventListener('click', ppEditProfileOpen);
 
 //закрыть пп
 function ppEditProfileClose() {
-  ppEditProfile.classList.remove('ppEditProfile_active');
+  ppEditProfile.classList.remove('popup-edit-profile_active');
 }
 btnClose.addEventListener('click', ppEditProfileClose);
 
