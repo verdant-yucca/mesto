@@ -3,7 +3,7 @@
   height: 50px;
   margin: 35px 0 35px auto;
   padding: 0;
-	border-radius: 2px;
+  border-radius: 2px;
   background-color: transparent;
   border: 2px solid #fff;
   cursor: pointer;
@@ -19,7 +19,9 @@
 
 @media screen and (max-width: 950px) {
   .profile__button-add {
+    margin: 35px auto 0;
     width: 100%;
     align-items: center;
+    background-size: 16px 16px;
   }
 }

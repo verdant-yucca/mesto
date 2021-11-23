@@ -1,6 +1,9 @@
 .element {
-  max-width: 282px;
+  min-width: 282px;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   overflow: hidden;
   background-color: #fff;
 }

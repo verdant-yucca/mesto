@@ -5,9 +5,9 @@ let info = profile.querySelector('.profile__profile-info');
 let ppEditProfile = document.querySelector('.popup-edit-profile');
 //let ppContainer = ppEditProfile.querySelector('.popup-edit-profile__container');
 let fieldsEdit = ppEditProfile.querySelector('.popup-edit-profile__edit');
-let editName = ppEditProfile.querySelector('.popup-edit-profile__input_name');
-let editInfo = ppEditProfile.querySelector('.popup-edit-profile__input_info');
-let btnClose = ppEditProfile.querySelector('.popup-edit-profile__batton-close');
+let editName = ppEditProfile.querySelector('.popup-edit-profile__input_profile_name');
+let editInfo = ppEditProfile.querySelector('.popup-edit-profile__input_profile_info');
+let btnClose = ppEditProfile.querySelector('.popup-edit-profile__button-close');
 
 
 //открыть пп

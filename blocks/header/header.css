@@ -2,7 +2,7 @@
   width: 68.75%;
   margin: 28px 0 0;
   padding-bottom: 41px;
-  border-bottom: 1px rgba(255, 255, 255, .33) solid;
+  border-bottom: 1px rgba(84, 84, 84, 0.7) solid;
   display: flex;
   justify-content: space-between;
 }
