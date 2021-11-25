@@ -82,46 +82,46 @@ fieldsEdit.addEventListener('submit', SubmitPopupEditProfile);
 //#region добавление карточки
 // создание клона карточки
 function createNewCard(name, link) {
-	const card = templateCard.querySelector('.element').cloneNode(true);
+  const card = templateCard.querySelector('.element').cloneNode(true);
   const cardImage = card.querySelector('.element__image');
   const cardUrl = card.querySelector('.element__element-info');
-	cardImage.src = link;
-	cardImage.alt = name;
-	cardUrl.textContent = name;
+  cardImage.src = link;
+  cardImage.alt = name;
+  cardUrl.textContent = name;
   card.querySelector('.element__delete').addEventListener('click', () => {
-		card.remove();
-	});
-	card.querySelector('.element__button-like').addEventListener('click', e => {
-		e.target.classList.toggle('element__button-like_active');
-	});
-	cardImage.addEventListener('click', () => {
-		popupImageFullscreen.classList.add('popup_active');
-		imageFullscreen.src = link;
-		titleFullscreen.textContent = name;
-	});
+    card.remove();
+  });
+  card.querySelector('.element__button-like').addEventListener('click', e => {
+    e.target.classList.toggle('element__button-like_active');
+  });
+  cardImage.addEventListener('click', () => {
+    popupImageFullscreen.classList.add('popup_active');
+    imageFullscreen.src = link;
+    titleFullscreen.textContent = name;
+  });
   btnClosePpImageFullscreen.addEventListener('click', () => {
     popupImageFullscreen.classList.remove('popup_active');
   });
-	return card;
+  return card;
 }
 
 //добавление карточек из массива
 initialCards.forEach(card => {
-	elementsCards.append(createNewCard (card.name, card.link));
+  elementsCards.append(createNewCard (card.name, card.link));
 });
 
 // открыть пп
 btnAdd.addEventListener('click', () => {
   popupAddKards.classList.add('popup_active');
   photoNameInput.value = '';
-	photoSrcInput.value = '';
+  photoSrcInput.value = '';
 });
 
 //функция добавления карточки
 function addPhotoElement (e) {
-	e.preventDefault();
-	elementsCards.prepend(createNewCard (photoNameInput.value, photoSrcInput.value));
-	popupAddKards.classList.remove('popup_active');
+  e.preventDefault();
+  elementsCards.prepend(createNewCard (photoNameInput.value, photoSrcInput.value));
+  popupAddKards.classList.remove('popup_active');
 }
 submitPopupAddKards.addEventListener('submit', addPhotoElement);
 
