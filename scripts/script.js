@@ -109,6 +109,7 @@ function createNewCard(name, link) {
     openPopup(popupImageFullscreen);
     imageFullscreen.src = link;
     titleFullscreen.textContent = name;
+    cardImage.alt = name;
   });
   btnClosePpImageFullscreen.addEventListener('click', () => {
     closePopup(popupImageFullscreen);
