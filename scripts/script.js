@@ -54,18 +54,29 @@ const editName = ppEditProfile.querySelector('.popup__input_profile_name');
 const editInfo = ppEditProfile.querySelector('.popup__input_profile_info');
 const btnClose = ppEditProfile.querySelector('.popup__button-close');
 
+//#region функции окрытия и закрытия попапа
+
+function openPopup(popup) {
+  popup.classList.add('popup_active');
+};
+function closePopup(popup) {
+  popup.classList.remove('popup_active');
+};
+
+//#endregion
+
 //#region попап изменения имени и инфо профиля
 // открыть пп
 function openPopupEditProfile() {
   editName.value = name.textContent;
   editInfo.value = info.textContent;
-  ppEditProfile.classList.add('popup_active');
+  openPopup(ppEditProfile);
 }
 btnEdit.addEventListener('click', openPopupEditProfile);
 
 //закрыть пп
 function closePopuoEditProfile() {
-  ppEditProfile.classList.remove('popup_active');
+  closePopup(ppEditProfile);
 }
 btnClose.addEventListener('click', closePopuoEditProfile);
 
@@ -95,15 +106,15 @@ function createNewCard(name, link) {
     e.target.classList.toggle('element__button-like_active');
   });
   cardImage.addEventListener('click', () => {
-    popupImageFullscreen.classList.add('popup_active');
+    openPopup(popupImageFullscreen);
     imageFullscreen.src = link;
     titleFullscreen.textContent = name;
   });
   btnClosePpImageFullscreen.addEventListener('click', () => {
-    popupImageFullscreen.classList.remove('popup_active');
+    closePopup(popupImageFullscreen);
   });
   return card;
-}
+};
 
 //добавление карточек из массива
 initialCards.forEach(card => {
@@ -112,7 +123,7 @@ initialCards.forEach(card => {
 
 // открыть пп
 btnAdd.addEventListener('click', () => {
-  popupAddKards.classList.add('popup_active');
+  openPopup(popupAddKards);
   photoNameInput.value = '';
   photoSrcInput.value = '';
 });
@@ -121,12 +132,12 @@ btnAdd.addEventListener('click', () => {
 function addPhotoElement (e) {
   e.preventDefault();
   elementsCards.prepend(createNewCard (photoNameInput.value, photoSrcInput.value));
-  popupAddKards.classList.remove('popup_active');
+  closePopup(popupAddKards);
 }
 submitPopupAddKards.addEventListener('submit', addPhotoElement);
 
 //закрыть пп добавления карточки
 btnClosePopupAddKards.addEventListener('click', () => {
-  popupAddKards.classList.remove('popup_active');
+  closePopup(popupAddKards);
 });
 //#endregion
