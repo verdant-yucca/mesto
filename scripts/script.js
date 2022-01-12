@@ -1,4 +1,3 @@
-
 const initialCards = [
   {
     name: 'Архыз',
@@ -26,16 +25,15 @@ const initialCards = [
   }
 ];
 
-//для создания элемента
-const elementsCards = document.querySelector('.elements');
-const templateCard = document.querySelector('#element').content;
-
-//для увеличения фото
+//фуллскрин
 const popupImageFullscreen = document.querySelector('.popup_type_image-fullscreen');
 const btnClosePpImageFullscreen = popupImageFullscreen.querySelector('.popup__button-close');
 const imageFullscreen = popupImageFullscreen.querySelector('.popup__image');
 const titleFullscreen = popupImageFullscreen.querySelector('.popup__image-text');
 
+//карточки
+const elementsCards = document.querySelector('.elements');
+const templateCard = document.querySelector('#element').content;
 const popupAddKards = document.querySelector('.popup_type_add-kards');
 const submitPopupAddKards = popupAddKards.querySelector('.popup__edit');
 const photoNameInput = popupAddKards.querySelector('.popup__input_profile_name');
@@ -43,6 +41,7 @@ const photoSrcInput = popupAddKards.querySelector('.popup__input_profile_info');
 const btnClosePopupAddKards = popupAddKards.querySelector('.popup__button-close');
 const btnSavePopupAddKards = popupAddKards.querySelector('.popup__button-save');
 
+//профиль
 const profile = document.querySelector('.profile');
 const btnEdit = profile.querySelector('.profile__button-edit');
 const btnAdd = profile.querySelector('.profile__button-add');
@@ -58,10 +57,26 @@ const btnClose = ppEditProfile.querySelector('.popup__button-close');
 
 function openPopup(popup) {
   popup.classList.add('popup_active');
+  hideError();
+  toggleButton();
+
+  const popupOpenedForm = document.querySelector('.popup_active');
+	document.addEventListener('keydown', closePopupEscOverlay);
+	popupOpenedForm.addEventListener('click', closePopupEscOverlay);
 };
 function closePopup(popup) {
   popup.classList.remove('popup_active');
 };
+
+//функция закрыпия попапа по Esc и по нажатию на Overlay
+function closePopupEscOverlay(e) {
+  if ((e.key==='Escape') || (e.target.classList.contains('popup_active'))) {
+		const popupOpened = document.querySelector('.popup_active');
+		closePopup(popupOpened);
+		document.removeEventListener('keydown', closePopupEscOverlay);
+		popupOpened.removeEventListener('click', closePopupEscOverlay);
+  }
+}
 
 //#endregion
 

@@ -1,0 +1,7 @@
+.popup__edit {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  width: 358px;
+  position: relative;
+}
