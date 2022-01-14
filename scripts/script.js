@@ -30,18 +30,26 @@ const btnClose = popupEditProfile.querySelector('.popup__button-close');
 
 function openPopup(popup) {
   popup.classList.add('popup_active');
-  document.addEventListener('keydown', closePopupEscOverlay);
-  document.addEventListener('click', closePopupEscOverlay);
+  document.addEventListener('keydown', closePopupEsc);
+  document.addEventListener('click', closePopupOverlay);
 };
 function closePopup(popup) {
   popup.classList.remove('popup_active');
-  document.removeEventListener('keydown', closePopupEscOverlay);
-  document.removeEventListener('click', closePopupEscOverlay);
+  document.removeEventListener('keydown', closePopupEsc);
+  document.removeEventListener('click', closePopupOverlay);
 };
 
 //функция закрыпия попапа по Esc и по нажатию на Overlay
-function closePopupEscOverlay(e) {
-  if ((e.key==='Escape') || (e.target.classList.contains('popup_active'))) {
+function closePopupOverlay(e) {
+  if  (e.target.classList.contains('popup_active')) {
+    const popupOpened = document.querySelector('.popup_active');
+    closePopup(popupOpened);
+  }
+}
+
+//функция закрыпия попапа по Esc и по нажатию на Overlay
+function closePopupEsc(e) {
+  if (evt.key==='Escape') {
     const popupOpened = document.querySelector('.popup_active');
     closePopup(popupOpened);
   }
