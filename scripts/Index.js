@@ -1,7 +1,7 @@
 
-import { ValidateForm } from "./validate.js";
+import { FormValidator } from "./FormValidator.js";
 import { initialCards } from "./initial-сards.js";
-import { Card } from "./cards.js";
+import { Card } from "./Card.js";
 
 //фуллскрин
 const popupImageFullscreen = document.querySelector('.popup_type_image-fullscreen');
@@ -71,16 +71,8 @@ function closePopupEsc(e) {
 
 //#region попап изменения имени и инфо профиля
 //создание экземпляров класса FormValidator
-const profileFormValidator = new ValidateForm(config, formEditProfile);
+const profileFormValidator = new FormValidator(config, formEditProfile);
 profileFormValidator.enableValidation();
-
-// изменить пп редактирования
-// function openPopupEditProfile(e) {
-//   e.preventDefault();
-//   inputProfileName.textContent = name.value;
-//   inputProfileInfo.textContent = info.value;
-// }
-// btnEdit.addEventListener('click', openPopupEditProfile);
 
 btnEdit.addEventListener('click', () => {
   inputProfileName.value = name.textContent;
@@ -106,7 +98,7 @@ formEditProfile.addEventListener('submit', handleProfileSubmit);
 //#endregion
 
 //#region добавление карточки
-const newCardFormValidator = new ValidateForm(config, formAddNewCard);
+const newCardFormValidator = new FormValidator(config, formAddNewCard);
 newCardFormValidator.enableValidation();
 
 // создание клона карточки
