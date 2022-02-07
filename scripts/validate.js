@@ -1,6 +1,6 @@
 class ValidateForm {
-  constructor(config, _formSelector) {
-    this._formSelector = _formSelector;
+  constructor(config, formSelector) {
+    this._formSelector = formSelector;
     this._inputSelector = config.inputSelector;
     this._submitButtonSelector = config.submitButtonSelector;
     this._inactiveButtonClass = config.inactiveButtonClass;

@@ -28,16 +28,7 @@
 
     <section>
       <ul class="elements">
-        <template id="element">
-          <li class="element">
-            <img class="element__image" src="#">
-            <div class="element__description">
-              <h2 class="element__element-info"></h2>
-              <button class="element__button-like" type="button" aria-label="Кнопка лайк"></button>
-            </div>
-            <button type="button" class="element__delete"></button>
-          </li>
-        </template>
+
       </ul>
     </section>
   </main>
@@ -62,7 +53,7 @@
   </div>
 
   <!-- Попап добавления новой карточки -->
-  <div class="popup popup_type_add-kards">
+  <div class="popup popup_type_add-cards">
     <div class="popup__container">
       <h3 class="popup__title">Новое место</h3>
       <form class="popup__edit" name="edit-form" novalidate>
@@ -84,6 +75,17 @@
       <button type="button" class="popup__button-close"></button>
     </div>
   </div>
+
+  <template id="element">
+    <li class="element">
+      <img class="element__image" src="#">
+      <div class="element__description">
+        <h2 class="element__element-info"></h2>
+        <button class="element__button-like" type="button" aria-label="Кнопка лайк"></button>
+      </div>
+      <button type="button" class="element__delete"></button>
+    </li>
+  </template>
 
   <script type="module" src="./scripts/script.js"></script>
 </body>
