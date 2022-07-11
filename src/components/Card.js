@@ -1,9 +1,9 @@
 class Card {
-  constructor(data, cardSelector, openPopupImageFullscreen) {
+  constructor(data, cardSelector, openImageFullscreen) {
     this._name = data.name;
     this._link = data.link;
     this._cardSelector = cardSelector;
-    this._openPopupImageFullscreen = openPopupImageFullscreen;
+    this._openImageFullscreen = openImageFullscreen;
   }
 
   //клонируем карточку
@@ -36,7 +36,7 @@ class Card {
       this._deleteElement();
     });
     this._elementImage.addEventListener('click', () => {
-      this._openPopupImageFullscreen(this._name, this._link);
+      this._openImageFullscreen(this._name, this._link);
     });
   }
 
