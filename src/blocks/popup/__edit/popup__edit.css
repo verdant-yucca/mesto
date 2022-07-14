@@ -5,3 +5,9 @@
   width: 358px;
   position: relative;
 }
+
+@media screen and (max-width: 680px) {
+  .popup__edit {
+    max-width: 282px;
+  }
+}

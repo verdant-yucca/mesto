@@ -25,24 +25,29 @@ export const initialCards = [
   }
 ];
 
-
 //ПП Изображение фуллскрин
-export const selectorPopupImageFullscreen = document.querySelector('.popup_type_image-fullscreen');
+export const selectorPopupImageFullscreen = '.popup_type_image-fullscreen';
 
 //ПП Добавление карточек
-export const selectorPopupAddCards = document.querySelector('.popup_type_add-cards');
-export const selectorFormPopupAddCards = selectorPopupAddCards.querySelector('.popup__edit');
+export const selectorPopupAddCards = '.popup_type_add-cards';
+export const elementFormPopupAddCards =
+  document.
+  querySelector('.popup_type_add-cards').
+  querySelector('.popup__edit');
 
 //Профиль
 const profile = document.querySelector('.profile');
-export const selectorBtnEditProfile = profile.querySelector('.profile__button-edit');
-export const selectorBtnAddCards = profile.querySelector('.profile__button-add');
-
-//ПП Изменение профиля
-export const selectorPopupEditProfile = document.querySelector('.popup_type_edit-profile');
-export const selectorFormPopupEditProfile = selectorPopupEditProfile.querySelector('.popup__edit');
-export const selectorInputNamePopupEditProfile = selectorPopupEditProfile.querySelector('.popup__input_profile_name');
-export const selectorInputInfoPopupEditProfile = selectorPopupEditProfile.querySelector('.popup__input_profile_info');
+export const elementButtonEditProfile = profile.querySelector('.profile__button-edit');
+export const elementButtonAddCards = profile.querySelector('.profile__button-add');
+export const selectorFildsProfile = {
+  nameProfileSelector: '.profile__profile-name',
+  infoProfileSelector: '.profile__profile-info'
+};
+export const selectorPopupEditProfile = '.popup_type_edit-profile';
+const elementPopupEditProfile = document.querySelector('.popup_type_edit-profile');
+export const elementFormPopupEditProfile = elementPopupEditProfile.querySelector('.popup__edit');
+export const elementInputNamePopupEditProfile = elementPopupEditProfile.querySelector('.popup__input_profile_name');
+export const elementInputInfoPopupEditProfile = elementPopupEditProfile.querySelector('.popup__input_profile_info');
 
 export const config = {
   formSelector: '.popup__edit',

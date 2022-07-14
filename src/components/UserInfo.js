@@ -1,9 +1,9 @@
 // Класс UserInfo отвечает за управление
 // отображением информации о пользователе на странице
 class UserInfo {
-  constructor(nameProfile, infoProfile) {
-    this._nameProfile = document.querySelector(nameProfile);
-    this._infoProfile = document.querySelector(infoProfile);
+  constructor( { nameProfileSelector, infoProfileSelector } ) {
+    this._nameProfile = document.querySelector('.profile').querySelector(nameProfileSelector);
+    this._infoProfile = document.querySelector('.profile').querySelector(infoProfileSelector);
   }
 
   // публичный метод getUserInfo, который возвращает объект

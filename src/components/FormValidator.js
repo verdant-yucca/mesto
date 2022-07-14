@@ -59,7 +59,7 @@ class FormValidator {
   };
 
   //перебираем поля формы
-  _setEventListeners = (_formSelector) => {
+  _setEventListeners = () => {
     this._toggleButtonState();
     this._inputList.forEach((inputElement) => {
       inputElement.addEventListener('input', () => {

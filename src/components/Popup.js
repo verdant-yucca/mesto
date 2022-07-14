@@ -1,7 +1,7 @@
 class Popup {
   //Принимает в конструктор единственный параметр — селектор попапа.
   constructor(popupSelector) {
-    this._popupSelector = popupSelector;
+    this._popupSelector = document.querySelector(popupSelector);
     this._handleEscClose = this._handleEscClose.bind(this);
   }
 

@@ -7,24 +7,25 @@ import { PopupWithForm } from "../components/PopupWithForm.js";
 import { UserInfo } from "../components/UserInfo.js";
 import {
   initialCards,
-  selectorBtnEditProfile,
-  selectorBtnAddCards,
+  elementButtonEditProfile,
+  elementButtonAddCards,
   selectorPopupImageFullscreen,
   selectorPopupAddCards,
   selectorPopupEditProfile,
-  selectorFormPopupEditProfile,
-  selectorFormPopupAddCards,
-  selectorInputNamePopupEditProfile,
-  selectorInputInfoPopupEditProfile,
+  elementFormPopupAddCards,
+  elementFormPopupEditProfile,
+  elementInputNamePopupEditProfile,
+  elementInputInfoPopupEditProfile,
+  selectorFildsProfile,
   config
 } from "../utils/constants.js";
 
 // функция создания карточки
 function createNewCard(data, cardSelector) {
-    const card = new Card(data, cardSelector, {handleCardClick: () => {
+    const card = new Card(data, cardSelector, () => {
       popupWithImage.open(data);
     }
-  });
+  );
   const cardElement = card.generateCard();
   return cardElement;
 }
@@ -34,18 +35,18 @@ const popupAddCards = new PopupWithForm(selectorPopupAddCards, handleNewCardSubm
 popupAddCards.setEventListeners();
 
 // вешаем слушатель на кнопку Добавить карточку
-selectorBtnAddCards.addEventListener('click', () => {
+elementButtonAddCards.addEventListener('click', () => {
   popupAddCards.open();
   newCardFormValidator.resetValidation();
 });
 
 // функция добавления карточки пользователем
-function handleNewCardSubmit({ name, info }) {
-  const obj = {
+function handleNewCardSubmit({ name, link }) {
+  const data = {
     name: name,
-    link: info
+    link: link
   };
-  cardsList.addItem(createNewCard(obj, '#element'), false);
+  cardsList.addItem(createNewCard(data, '#element'), false);
 };
 
 // экземпляр класса PopupWithImage = ПП с картинкой фуллскрин
@@ -54,7 +55,7 @@ popupWithImage.setEventListeners();
 
 // получаем данные профиля для передачи в ПП
 function handleUserInfo(data) {
-  userInfo.getUserInfo(data);
+  userInfo.setUserInfo(data);
 }
 
 // экземпляр класса PopupWithForm = ПП редактирования профиля
@@ -62,24 +63,24 @@ const popupEdit = new PopupWithForm(selectorPopupEditProfile, handleUserInfo);
 popupEdit.setEventListeners();
 
 // экземпляр класса UserInfo = управление отображением информации о пользователе
-const userInfo = new UserInfo('.profile__profile-name', '.profile__profile-info');
+const userInfo = new UserInfo(selectorFildsProfile);
 
 // вешаем слушатель на кнопку редактирования профиля
-selectorBtnEditProfile.addEventListener('click', () => {
+elementButtonEditProfile.addEventListener('click', () => {
   popupEdit.open();
-  const getInfo = userInfo.getUserInfo();
-  selectorInputNamePopupEditProfile.value = getInfo.name;
-  selectorInputInfoPopupEditProfile.value = getInfo.info;
+  const { name, info } = userInfo.getUserInfo();
+  elementInputNamePopupEditProfile.value = name;
+  elementInputInfoPopupEditProfile.value = info;
   profileFormValidator.resetValidation();
 });
 
 
 // экземпляр класса FormValidator = валидация формы редактирование профиля
-const profileFormValidator = new FormValidator(config, selectorFormPopupEditProfile);
+const profileFormValidator = new FormValidator(config, elementFormPopupEditProfile);
 profileFormValidator.enableValidation();
 
 // экземпляр класса FormValidator = валидация формы добавления карточки
-const newCardFormValidator = new FormValidator(config, selectorFormPopupAddCards);
+const newCardFormValidator = new FormValidator(config, elementFormPopupAddCards);
 newCardFormValidator.enableValidation();
 
 // добавление карточек из массива элементов при загрузке страницы
