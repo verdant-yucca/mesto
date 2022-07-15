@@ -8,12 +8,12 @@ class Card {
 
   //клонируем карточку
   _getTemplate() {
-    const userElement = document
+    const cardElement = document
       .querySelector(this._cardSelector)
       .content
       .querySelector('.element')
       .cloneNode(true);
-    return userElement;
+    return cardElement;
   }
 
   //переключатель лайка вкл/выкл

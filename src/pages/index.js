@@ -41,10 +41,10 @@ elementButtonAddCards.addEventListener('click', () => {
 });
 
 // функция добавления карточки пользователем
-function handleNewCardSubmit({ name, link }) {
+function handleNewCardSubmit({ name, info }) {
   const data = {
     name: name,
-    link: link
+    link: info
   };
   cardsList.addItem(createNewCard(data, '#element'), false);
 };
