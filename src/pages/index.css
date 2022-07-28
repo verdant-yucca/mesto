@@ -33,10 +33,12 @@
 @import url(../blocks/element/element.css);
 @import url(../blocks/element/__description/element__description.css);
 @import url(../blocks/element/__element-info/element__element-info.css);
+@import url(../blocks/element/__like-counter/element__like-counter.css);
 @import url(../blocks/element/__button-like/element__button-like.css);
 @import url(../blocks/element/__button-like/_active/element__button-like_active.css);
 @import url(../blocks/element/__image/element__image.css);
 @import url(../blocks/element/__delete/element__delete.css);
+@import url(../blocks/element/__delete/_active/element__delete_active.css);
 
 /* section footer */
 

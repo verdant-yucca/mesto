@@ -1,14 +1,16 @@
-// Класс UserInfo отвечает за управление
-// отображением информации о пользователе на странице
 class UserInfo {
-  constructor( { nameProfileSelector, infoProfileSelector } ) {
-    this._nameProfile = document.querySelector('.profile').querySelector(nameProfileSelector);
-    this._infoProfile = document.querySelector('.profile').querySelector(infoProfileSelector);
+  constructor( { nameProfileSelector, infoProfileSelector, avatarProfileSelector } ) {
+    this._nameProfile = document
+      .querySelector('.profile')
+      .querySelector(nameProfileSelector);
+    this._infoProfile = document
+      .querySelector('.profile')
+      .querySelector(infoProfileSelector);
+    this._avatarProfile = document
+      .querySelector('.profile')
+      .querySelector(avatarProfileSelector);
   }
 
-  // публичный метод getUserInfo, который возвращает объект
-  // с данными пользователя. Этот метод пригодится когда
-  // данные пользователя нужно будет подставить в форму при открытии.
   getUserInfo() {
     const userInfo = {
       name: this._nameProfile.textContent,
@@ -17,11 +19,10 @@ class UserInfo {
     return userInfo;
   }
 
-  // публичный метод setUserInfo, который принимает новые
-  // данные пользователя и добавляет их на страницу.
   setUserInfo(userInfo) {
     this._nameProfile.textContent = userInfo.name;
-    this._infoProfile.textContent = userInfo.info;
+    this._infoProfile.textContent = userInfo.about;
+    this._avatarProfile.style.backgroundImage = `url(${userInfo.avatar})`;
   }
 }
 
