@@ -35,6 +35,10 @@ class Card {
     }
   }
 
+  deleteCard(elementCard) {
+    elementCard.remove();
+  };
+
   addCardLike(counter) {
     this._buttonLike.classList.add('element__button-like_active');
     this._counter.textContent = counter;

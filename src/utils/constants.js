@@ -34,4 +34,4 @@ export const config = {
   errorClass: 'popup__error_active'
 };
 
-export const formValidators = {};
+// export const formValidators = {};

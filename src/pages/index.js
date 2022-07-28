@@ -23,7 +23,7 @@ import {
   elementInputInfoPopupEditProfile,
   elementAvatarProfile,
   config,
-  formValidators
+  // formValidators
 } from "../utils/constants.js";
 
 let userId = null;
@@ -70,7 +70,8 @@ function createNewCard(data, cardSelector) {
         popupConfirm.submitForm(() => {
           api.deleteCard(cardId)
           .then(() => {
-            elementCard.remove();
+            card.deleteCard(elementCard);
+            popupConfirm.close();
           })
           .catch(err => {
             console.log(`Ошибка: ${err}`);
@@ -111,13 +112,13 @@ function handleNewCardSubmit({ name, info }) {
   api.addCard(name, info)
     .then(data => {
       cardsList.addItem(createNewCard(data, '#element'), false);
+      popupAddCards.close();
     })
     .catch((err) => {
       console.log(`Ошибка: ${err}`);
     })
     .finally(() => {
       popupAddCards.renderLoading(false);
-      popupAddCards.close();
     });
 };
 
@@ -137,6 +138,7 @@ elementButtonAddCards.addEventListener('click', () => {
 //#endregion
 
 //#region валидация всех форм
+const formValidators = {};
 const enableValidation = (config) => {
   const formArr = Array.from(document.querySelectorAll(config.formSelector))
   formArr.forEach((formElement) => {
@@ -155,13 +157,13 @@ function handleUserInfo(data) {
   api.editProfile(data)
   .then(data => {
     userInfo.setUserInfo(data);
+    popupEditProfile.close();
   })
   .catch((err) => {
     console.log(`Ошибка: ${err}`);
   })
   .finally(() => {
     popupEditProfile.renderLoading(false);
-    popupEditProfile.close();
   });
 }
 
@@ -183,13 +185,13 @@ const handleAvatarEdit = ({ url }) => {
   api.editAvatar(url)
   .then(res => {
     userInfo.setUserInfo(res);
+    popupAvatar.close();
   })
   .catch((err) => {
     console.log(`Ошибка: ${err}`);
   })
   .finally(() => {
     popupAvatar.renderLoading(false);
-    popupAvatar.close();
   });
 }
 
