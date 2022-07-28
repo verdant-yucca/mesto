@@ -5,7 +5,7 @@ import { Section } from "../components/Section.js";
 import { PopupWithImage } from "../components/PicturePopup.js";
 import { PopupWithForm } from "../components/PopupWithForm.js";
 import { UserInfo } from "../components/UserInfo.js";
-import { PopupConfirm } from "../components/PopupConfirm.js";
+import { PopupWithConfirmation } from "../components/PopupWithConfirmation.js";
 import { Api } from "../components/Api.js";
 import {
   selectorPopupImageFullscreen,
@@ -127,7 +127,7 @@ popupAddCards.setEventListeners();
 const popupWithImage = new PopupWithImage(selectorPopupImageFullscreen);
 popupWithImage.setEventListeners();
 
-const popupConfirm = new PopupConfirm(selectorPopupConfirm);
+const popupConfirm = new PopupWithConfirmation(selectorPopupConfirm);
 popupConfirm.setEventListeners();
 
 elementButtonAddCards.addEventListener('click', () => {
